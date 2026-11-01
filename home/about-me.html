@@ -16,57 +16,47 @@
     <style>
     body {background-image: url('../bg/tartan_fabric_blue.jpg');
           background-repeat: repeat;}
-    h1 {background-image: url('bg/cirrus_cloud_white.jpg');
+    h1 {color: aliceblue;
         text-align: center;
         font-family: "Risque";
         font-size: xxx-large;
         font-weight: 900;
         letter-spacing: 5px;}
-    h2 {background-image: url('bg/cirrus_cloud_white.jpg');
+    h2 {color: aliceblue;
         text-align: center;
         font-family: "Risque";
         font-size: xx-large;
         font-weight: 300;
         letter-spacing: 3px;}
-    h3 {font-family: "SawdustMarionette";
+    h3 {color: aliceblue;
+        font-family: "SawdustMarionette";
         font-size: xx-large;}
-    p {font-family: "LitterboxICG";
-       font-size: x-large;}
-    p.centered {text-align: center;}
-    a {font-family: "LitterboxICG";}
-    img.button {border-style: outset;
-                border-color: #baa87b;}
+    p {color: aliceblue;
+       font-family: "LitterboxICG";
+       font-size: xx-large;
+       text-align: center;}
+    li {color: aliceblue;
+        font-family: "LitterboxICG";
+        font-size: x-large;}
+    a {color: aqua;
+       font-family: "LitterboxICG";}
+
     </style>
 </head>
 
 <body>
-    <p>Hi, my name is Kimberly Evans, but everyone calls me Kimmy! I live in -- with my mom, dad, and </p>
+    <h1>Who Is Kimmy?</h1>
+    <center><img src="../img/garf_bar.gif"><img src="../img/garf_bar.gif"></center>
+    <p>Hi, my name is Kimberly Evans, but everyone calls me Kimmy! I live in -- with my mom, dad, and 2 cats, Cyan and Cobalt (if you're interested, check out <a href="pets.html">My Pets Page</a>!). I am 15 years old and I go to ------- school. My favourite subjects are English and art! :-D</p>
+    <p>My birthday is 3/11/82 (I turn 16 soon!)</p>
+    <p style="text-align: left;">
+        <u>My Interests</u> <br>
+        I love the internet, reading, listening to music, cats, and exploring! Here's a more extensive list:
+        <ul style="margin-top: -30px">
+            <li>Jim Davis' <a href="garfield.html">Garfield</a> comics <img src="../img/garf_tongue.gif") height="30px"></li>
+            <li>Radiohead (especially Thom Yorke!)</li>
+            <li>The Magic Treehouse book series (even though I'm a bit old for it...)</li>
+        </ul>
+    </p>
 
-    <script>
-            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            const value = "--"
-            let interval = null
-            const element = document.querySelector('p')
-            const width = element.offsetWidth
-
-            element.addEventListener('mouseover', e => {
-                element.style.width = `${width}px`
-                let iteration = 0
-                clearInterval(interval)
-                interval = setInterval(() => {
-                    e.target.innerText = e.target.innerText
-                    .split("")
-                    .map((letter, index) => {
-                        if(index < iteration){
-                            return value[index];
-                        }
-                        return letters[Math.floor(Math.random() * 26)]
-                    }).join("")
-                    if(iteration >= value.length){
-                        clearInterval(interval)
-                    }
-                    iteration += 1/100
-                }, 30)
-            })
-        </script>
 </body>
