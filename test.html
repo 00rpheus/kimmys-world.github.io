@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-4.0.0.module.js" integrity="sha256-WK/EJImTrql5EQIEpr2ViDEulDC+Fay9S8aH/huq0IM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>CREATIVITY</h1>
+
+        <script>
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            const value = "CREATIVITY"
+            let interval = null
+            const element = document.querySelector('h1')
+            const width = element.offsetWidth
+
+            element.addEventListener('mouseover', e => {
+                element.style.width = `${width}px`
+                let iteration = 0
+                clearInterval(interval)
+                interval = setInterval(() => {
+                    e.target.innerText = e.target.innerText
+                    .split("")
+                    .map((letter, index) => {
+                        if(index < iteration){
+                            return value[index];
+                        }
+                        return letters[Math.floor(Math.random() * 26)]
+                    }).join("")
+                    if(iteration >= value.length){
+                        clearInterval(interval)
+                    }
+                    iteration += 1/5
+                }, 30)
+            })
+        </script>
+
+    </body>
+</html>
