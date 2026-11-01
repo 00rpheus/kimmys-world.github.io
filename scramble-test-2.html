@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-4.0.0.module.js" integrity="sha256-WK/EJImTrql5EQIEpr2ViDEulDC+Fay9S8aH/huq0IM=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>CREATIVITY</h1>
+
+        <script>
+          
+          function scramble(str) {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            return [...str].map(c => letters[Math.floor(Math.random() * 26)]).join("")
+          }
+
+          const heading = document.querySelector('h1')
+          interval = setInterval(() => {
+              heading.innerText = "CREA" + scramble("TIVITY")
+          }, 50)
+        </script>
+
+    </body>
+</html>

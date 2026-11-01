@@ -1,0 +1,39 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>CREATIVITY</h1>
+
+        <script>
+
+          // Scrambles the text of an element.
+          // Start and end allow you to control which section of the text you want to scramble.
+          // (Note that indexes start at 0.)
+          // Example: scramble("Hello World!", 3, 8) scrambles the "llo Wor" section.
+          // If start is left empty, it will default to the start of the text.
+          // If end is left empty, it will default to the end of the text.
+          function scramble(element, start=0, end=element.innerText.length) {
+            const str = element.innerText
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            let result = ""
+            for (let i = 0; i < str.length; i++) {
+              if (i < start || i >= end) {
+                result += str.at(i)
+              } else {
+                result += letters[Math.floor(Math.random() * 26)]
+              }
+            }
+            return result;
+          }
+
+          // Save the elements you want to scramble here
+          const heading = document.querySelector("h1")
+
+          // Set whatever you want to scramble here
+          interval = setInterval(() => {
+            heading.innerText = scramble(heading, 4)
+          }, 50) // How often the scramble happens in milliseconds
+        </script>
+
+    </body>
+</html>
