@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNDER CONSTRUCTION</title>
+    <link rel="icon" type="image/x-icon" href="../img/construction.gif"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      height: 100vh;
+      background-image: url('../img/mall-3.png');
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+    }
+    .shadow {
+      position: absolute;
+      width: 200vw;
+      height: 200vh;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      background-image: radial-gradient(circle at center, transparent, #000 20%);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>i remember</h1>
+    <h1>i remember</h1>
+    <h1 style="font-size: xx-large; color: aliceblue;">UNDER CONSTRUCTION</h1>
+    <img src="../img/construction.gif" height="500px">
+    <h1>mber</h1>
+    <div class="shadow"></div>
+  </div>
+<!-- i remember -->
+  <script>
+  const shadow = document.querySelector('.shadow')
+  document.addEventListener('mousemove', (e) => {
+    let x = e.clientX - (document.documentElement.clientWidth * 1.5)
+    let y = e.clientY - (document.documentElement.clientHeight * 1.5)
+    shadow.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+  })
+  </script>
+</body>
